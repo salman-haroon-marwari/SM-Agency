@@ -102,8 +102,8 @@ const ServicesPage = () => {
           transition={{ duration: 0.6 }}
         >
           <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-indigo-500/5 -z-10 transform -rotate-1 rounded-full blur-3xl"></div>
-          <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent mb-6">Our Services</h1>
-          <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent mb-6">Our Services</h1>
+          <p className="text-lg sm:text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
             Comprehensive digital & AI-powered solutions to grow your business globally. 
             From web development to SEO optimization, AI automation, and monetization strategies.
           </p>
@@ -118,12 +118,12 @@ const ServicesPage = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: categoryIndex * 0.1 }}
             >
-              <h2 className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent mb-8 pb-2 border-b border-indigo-200/30">{category}</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent mb-8 pb-2 border-b border-indigo-200/30">{category}</h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 {services.map((service, serviceIndex) => (
                   <motion.div 
                     key={serviceIndex}
-                    className="bg-gradient-to-br from-white to-gray-50 p-7 rounded-2xl border border-indigo-100 shadow-md hover:shadow-xl transition-all duration-300 hover:scale-[1.02] text-center relative overflow-hidden"
+                    className="bg-gradient-to-br from-white to-gray-50 p-6 sm:p-7 rounded-2xl border border-indigo-100 shadow-md hover:shadow-xl transition-all duration-300 hover:scale-[1.02] text-center relative overflow-hidden"
                     initial={{ opacity: 0, y: 20, rotateY: -10 }}
                     whileInView={{ opacity: 1, y: 0, rotateY: 0 }}
                     viewport={{ once: true }}
@@ -131,11 +131,11 @@ const ServicesPage = () => {
                   >
                     <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-indigo-500/5 -z-10"></div>
                     <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-blue-400/10 to-indigo-400/10 rounded-full -m-16"></div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-3 relative z-10">{service.name}</h3>
-                    <p className="text-gray-600 mb-6 relative z-10">{service.desc}</p>
+                    <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-3 relative z-10">{service.name}</h3>
+                    <p className="text-sm sm:text-base text-gray-600 mb-4 sm:mb-6 relative z-10">{service.desc}</p>
                     <Link 
                       href={`/services/${service.name.toLowerCase().replace(/\./g, '').replace(/&/g, 'and').replace(/[^a-zA-Z0-9]/g, '-').replace(/-+/g, '-').replace(/^-+|-+$/g, '').toLowerCase()}` as const}
-                      className="inline-block bg-gradient-to-r from-blue-500 to-indigo-600 text-white px-5 py-2.5 rounded-lg font-medium hover:from-blue-600 hover:to-indigo-700 transition-all shadow-md relative z-10"
+                      className="inline-block bg-gradient-to-r from-blue-500 to-indigo-600 text-white px-4 py-2 sm:px-5 sm:py-2.5 rounded-lg font-medium hover:from-blue-600 hover:to-indigo-700 transition-all shadow-md relative z-10 text-sm sm:text-base"
                     >
                       Learn more
                     </Link>
@@ -154,12 +154,12 @@ const ServicesPage = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
         >
           <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-indigo-500/10 -z-10 transform rotate-1 rounded-3xl blur-xl"></div>
-          <div className="bg-gradient-to-br from-blue-500 to-indigo-600 rounded-3xl p-12 text-white relative z-10 shadow-2xl border border-white/20 backdrop-blur-sm">
-            <h2 className="text-2xl md:text-3xl font-bold mb-4">Ready to Transform Your Business?</h2>
-            <p className="text-lg mb-6 max-w-2xl mx-auto">Let us help you grow with our comprehensive digital solutions</p>
+          <div className="bg-gradient-to-br from-blue-500 to-indigo-600 rounded-3xl p-8 sm:p-12 text-white relative z-10 shadow-2xl border border-white/20 backdrop-blur-sm">
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-4">Ready to Transform Your Business?</h2>
+            <p className="text-base sm:text-lg mb-6 max-w-2xl mx-auto">Let us help you grow with our comprehensive digital solutions</p>
             <Link 
               href="/contact" 
-              className="inline-block bg-white text-blue-600 px-8 py-4 rounded-full text-lg font-medium hover:bg-gray-100 transition-all shadow-lg hover:shadow-xl"
+              className="inline-block bg-white text-blue-600 px-6 py-3 sm:px-8 sm:py-4 rounded-full text-base sm:text-lg font-medium hover:bg-gray-100 transition-all shadow-lg hover:shadow-xl"
             >
               Get Started Today
             </Link>
