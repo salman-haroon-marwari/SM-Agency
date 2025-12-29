@@ -201,15 +201,6 @@ const HomePage = () => {
         </div>
       </section>
 
-      <div className="text-center mt-12">
-        <Link 
-          href="/services" 
-          className="inline-block bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-4 rounded-full text-lg font-medium hover:from-blue-700 hover:to-indigo-700 transition-all shadow-lg"
-        >
-          Visit All Services
-        </Link>
-      </div>
-
       {/* Why Choose Us Section */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
