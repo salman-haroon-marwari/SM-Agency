@@ -374,8 +374,8 @@ const BlogPage = () => {
   };
   
   return (
-    <div className="min-h-screen bg-gradient-to-b from-blue-50 via-indigo-50 to-purple-50 py-20">
-      <div className="container mx-auto px-4">
+    <div className="min-h-screen bg-gradient-to-b from-blue-50 via-indigo-50 to-purple-50 py-20 overflow-x-hidden">
+      <div className="container mx-auto px-4 max-w-full">
         {/* Hero Section */}
         <motion.div 
           className="text-center mb-16 relative"
@@ -385,21 +385,21 @@ const BlogPage = () => {
           transition={{ duration: 0.6 }}
         >
           <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-indigo-500/5 -z-10 transform -rotate-1 rounded-full blur-3xl"></div>
-          <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent mb-6">Digital Marketing & Web Development Blog</h1>
-          <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent mb-6">Digital Marketing & Web Development Blog</h1>
+          <p className="text-lg sm:text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
             Expert insights, tips, and strategies for digital marketing, web development, SEO, and AI automation. 
             Stay updated with the latest industry trends and best practices from SM Agency.
           </p>
           
           {/* Search Bar */}
           <motion.div 
-            className="mt-8 max-w-2xl mx-auto relative"
+            className="mt-8 max-w-2xl mx-auto relative w-full"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
           >
             <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-indigo-500/10 -z-10 transform -rotate-1 rounded-full blur-2xl"></div>
-            <div className="relative bg-white/30 backdrop-blur-sm p-1 rounded-full">
+            <div className="relative bg-white/30 backdrop-blur-sm p-1 rounded-full w-full">
               <input
                 type="text"
                 placeholder="Search digital marketing, SEO, web development, AI & automation tips..."
@@ -429,7 +429,7 @@ const BlogPage = () => {
 
         {/* Categories */}
         <motion.div 
-          className="flex flex-wrap justify-center gap-4 mb-12 relative"
+          className="flex flex-wrap justify-center gap-3 sm:gap-4 mb-12 relative overflow-x-auto pb-2"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -439,7 +439,7 @@ const BlogPage = () => {
           {categories.map((category, index) => (
             <motion.button
               key={index}
-              className={`px-5 py-3 rounded-full transition-all duration-300 relative z-10 ${
+              className={`px-4 py-2 sm:px-5 sm:py-3 rounded-full transition-all duration-300 relative z-10 flex-shrink-0 ${
                 selectedCategory === category.name
                   ? 'bg-gradient-to-r from-blue-600 to-indigo-600 text-white shadow-lg transform scale-105'
                   : 'bg-gradient-to-r from-white to-gray-50 text-gray-700 border border-indigo-100 shadow-sm hover:from-blue-50 hover:to-indigo-50 hover:text-indigo-700 hover:shadow-md'
@@ -455,7 +455,7 @@ const BlogPage = () => {
 
         {/* Blog Posts Grid */}
         <motion.div 
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -493,11 +493,11 @@ const BlogPage = () => {
                   <span className="mx-2">•</span>
                   <span>{post.readTime}</span>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-indigo-600 transition-colors duration-300">{post.title}</h3>
-                <p className="text-gray-600 mb-4 line-clamp-3">{post.excerpt}</p>
+                <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-3 group-hover:text-indigo-600 transition-colors duration-300">{post.title}</h3>
+                <p className="text-sm sm:text-base text-gray-600 mb-4 line-clamp-3">{post.excerpt}</p>
                 <Link 
                   href={`/blog/${post.id}`} 
-                  className="inline-block bg-gradient-to-r from-blue-500 to-indigo-600 text-white px-4 py-2 rounded-lg font-medium hover:from-blue-600 hover:to-indigo-600 transition-all shadow-md"
+                  className="inline-block bg-gradient-to-r from-blue-500 to-indigo-600 text-white px-4 py-2 rounded-lg font-medium hover:from-blue-600 hover:to-indigo-600 transition-all shadow-md text-sm sm:text-base"
                 >
                   Read more
                 </Link>
@@ -529,7 +529,7 @@ const BlogPage = () => {
 
         {/* Newsletter Signup */}
         <motion.div 
-          className="bg-gradient-to-br from-blue-500 to-indigo-600 rounded-3xl p-12 text-white mb-16 relative overflow-hidden"
+          className="bg-gradient-to-br from-blue-500 to-indigo-600 rounded-3xl p-8 sm:p-12 text-white mb-16 relative overflow-hidden"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -539,16 +539,16 @@ const BlogPage = () => {
           <div className="absolute top-0 left-0 w-64 h-64 bg-gradient-to-br from-white/10 to-transparent rounded-full -m-32"></div>
           <div className="absolute bottom-0 right-0 w-64 h-64 bg-gradient-to-br from-white/10 to-transparent rounded-full -m-32"></div>
           <div className="max-w-3xl mx-auto text-center relative z-10">
-            <h2 className="text-2xl md:text-3xl font-bold mb-4">Stay Updated</h2>
-            <p className="text-lg mb-6">
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-4">Stay Updated</h2>
+            <p className="text-base sm:text-lg mb-6">
               Subscribe to our newsletter and get the latest insights on digital marketing, 
               web development, and AI automation delivered straight to your inbox.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+            <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto w-full">
               <input 
                 type="email" 
                 placeholder="Your email address" 
-                className="flex-grow px-4 py-3 rounded-lg text-gray-900 bg-white/90 backdrop-blur-sm"
+                className="flex-grow px-4 py-3 rounded-lg text-gray-900 bg-white/90 backdrop-blur-sm w-full"
                 value={newsletterEmail}
                 onChange={(e) => setNewsletterEmail(e.target.value)}
                 required
@@ -557,7 +557,7 @@ const BlogPage = () => {
                 type="button"
                 onClick={handleNewsletterSubmit}
                 disabled={isSubmitting}
-                className="bg-white text-blue-600 px-6 py-3 rounded-lg font-medium hover:bg-gray-100 transition-all shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed"
+                className="bg-white text-blue-600 px-6 py-3 rounded-lg font-medium hover:bg-gray-100 transition-all shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed w-full sm:w-auto"
               >
                 {isSubmitting ? 'Subscribing...' : 'Subscribe'}
               </button>
@@ -584,9 +584,9 @@ const BlogPage = () => {
           transition={{ duration: 0.5, delay: 0.6 }}
         >
           {totalPages > 1 && (
-            <div className="flex items-center space-x-2">
+            <div className="flex items-center space-x-1 sm:space-x-2 overflow-x-auto pb-2">
               <motion.button 
-                className={`w-12 h-12 rounded-full ${currentPage === 1 ? 'bg-gray-200 text-gray-400 cursor-not-allowed' : 'bg-gradient-to-r from-blue-500 to-indigo-500 text-white hover:from-blue-600 hover:to-indigo-600'} flex items-center justify-center shadow-md`}
+                className={`w-10 h-10 sm:w-12 sm:h-12 rounded-full ${currentPage === 1 ? 'bg-gray-200 text-gray-400 cursor-not-allowed' : 'bg-gradient-to-r from-blue-500 to-indigo-500 text-white hover:from-blue-600 hover:to-indigo-600'} flex items-center justify-center shadow-md flex-shrink-0`}
                 onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}
                 disabled={currentPage === 1}
                 whileHover={{ scale: currentPage === 1 ? 1 : 1.05 }}
@@ -599,11 +599,11 @@ const BlogPage = () => {
               {Array.from({ length: totalPages }, (_, i) => i + 1).map(page => (
                 <motion.button
                   key={page}
-                  className={`w-12 h-12 rounded-full flex items-center justify-center font-medium ${
+                  className={`w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center font-medium ${
                     currentPage === page 
                       ? 'bg-gradient-to-r from-blue-600 to-indigo-600 text-white shadow-lg' 
                       : 'bg-gray-200 text-gray-700 hover:bg-gradient-to-r hover:from-blue-500 hover:to-indigo-500 hover:text-white'
-                  }`}
+                  } flex-shrink-0`}
                   onClick={() => setCurrentPage(page)}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
@@ -613,7 +613,7 @@ const BlogPage = () => {
               ))}
               
               <motion.button 
-                className={`w-12 h-12 rounded-full ${currentPage === totalPages ? 'bg-gray-200 text-gray-400 cursor-not-allowed' : 'bg-gradient-to-r from-blue-500 to-indigo-500 text-white hover:from-blue-600 hover:to-indigo-600'} flex items-center justify-center shadow-md`}
+                className={`w-10 h-10 sm:w-12 sm:h-12 rounded-full ${currentPage === totalPages ? 'bg-gray-200 text-gray-400 cursor-not-allowed' : 'bg-gradient-to-r from-blue-500 to-indigo-500 text-white hover:from-blue-600 hover:to-indigo-600'} flex items-center justify-center shadow-md flex-shrink-0`}
                 onClick={() => setCurrentPage(prev => Math.min(prev + 1, totalPages))}
                 disabled={currentPage === totalPages}
                 whileHover={{ scale: currentPage === totalPages ? 1 : 1.05 }}
