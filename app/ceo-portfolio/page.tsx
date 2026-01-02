@@ -181,7 +181,7 @@ const CEOPortfolioPage = () => {
                 <div className="flex flex-col items-center space-y-2 mb-6">
                   <Link href="https://linktr.ee/SalmanMarwari" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:text-green-800 transition-colors">
                     <span className="sr-only">Linktree</span>
-                    <img src="/linktree.png" alt="Linktree" className="w-6 h-6" />
+                    <img src="https://res.cloudinary.com/dqxqa6uvw/image/upload/v1767316409/linktree_bck8hz.png" alt="Linktree" className="w-6 h-6" />
                   </Link>
                   <span className="text-xs text-gray-600">Linktree</span>
                 </div>
@@ -368,7 +368,7 @@ const CEOPortfolioPage = () => {
               rel="noopener noreferrer"
               className="bg-white text-green-600 px-8 py-4 rounded-full text-lg font-medium hover:bg-gray-100 transition-all shadow-lg flex items-center justify-center space-x-2"
             >
-              <img src="/linktree.png" alt="Linktree" className="w-5 h-5" />
+              <img src="https://res.cloudinary.com/dqxqa6uvw/image/upload/v1767316409/linktree_bck8hz.png" alt="Linktree" className="w-5 h-5" />
               <span>Linktree</span>
             </Link>
           </div>
