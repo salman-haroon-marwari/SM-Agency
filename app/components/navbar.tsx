@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
-type ValidPath = '/' | '/services' | '/about' | '/contact' | '/blog';
+type ValidPath = '/' | '/services' | '/about' | '/contact' | '/blog' | '/ceo-portfolio';
 
 interface NavItem {
   name: string;
@@ -34,6 +34,7 @@ const Navbar = () => {
     { name: 'About', path: '/about' },
     { name: 'Contact', path: '/contact' },
     { name: 'Blog', path: '/blog' },
+    { name: 'CEO Portfolio', path: '/ceo-portfolio' },
   ] as const;
 
   return (
