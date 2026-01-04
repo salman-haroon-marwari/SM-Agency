@@ -73,7 +73,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <meta name="p:domain_verify" content="2c56992dbdd7ea23ead924c015ef30ca" />
+        <meta name="p:domain_verify" content="ceaf0c4a16f7ce3829918f37fb304fe0" />
         <Script
           id="schema-markup"
           type="application/ld+json"
