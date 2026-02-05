@@ -7,6 +7,28 @@ const ServicesPage = () => {
 
 
   const services = [
+    // AI Automation & AI Agents
+    { name: 'Lead Qualification Automation', category: 'AI Automation & AI Agents', desc: 'Automate lead qualification process with AI-powered filtering' },
+    { name: 'Customer Support Automation (Email / WhatsApp / Chat)', category: 'AI Automation & AI Agents', desc: '24/7 automated customer support across multiple channels' },
+    { name: 'Invoice & Payment Follow-up Automation', category: 'AI Automation & AI Agents', desc: 'A smart automation system that tracks invoices, sends personalized payment reminders, and updates payment status automatically—without manual follow-ups.' },
+    { name: 'Recruitment Screening Automation', category: 'AI Automation & AI Agents', desc: 'AI-powered candidate screening and interview scheduling' },
+    { name: 'Social Media Content & Posting Automation', category: 'AI Automation & AI Agents', desc: 'An AI-powered social media automation system that plans, creates, schedules, and tracks content across platforms—saving time while maintaining consistency and performance.' },
+    { name: 'Automated Business Report Generation', category: 'AI Automation & AI Agents', desc: 'Generate comprehensive business reports automatically' },
+    { name: 'Email Sorting & Priority Automation', category: 'AI Automation & AI Agents', desc: 'A smart email automation system that categorizes, prioritizes, and routes emails automatically so teams focus only on what matters.' },
+    { name: 'CRM Data Cleaning & Management Automation', category: 'AI Automation & AI Agents', desc: 'An AI-powered automation system that continuously cleans, validates, and maintains CRM data accuracy—ensuring your sales and marketing teams work with reliable information.' },
+    { name: 'E-commerce Order & Refund Automation', category: 'AI Automation & AI Agents', desc: 'A smart automation system that manages orders, refunds, and customer notifications automatically—reducing manual workload and improving customer experience.' },
+    { name: 'SOP & Internal Process Automation', category: 'AI Automation & AI Agents', desc: 'AI-powered SOP automation that guides teams through internal processes, ensures consistency, and reduces operational errors.' },
+    { name: 'Sales AI Agent', category: 'AI Automation & AI Agents', desc: 'AI-powered sales assistant that identifies leads, predicts conversions, and automates follow-ups to maximize revenue and reduce manual sales effort.' },
+    { name: 'HR & Hiring AI Agent', category: 'AI Automation & AI Agents', desc: 'AI-driven HR assistant that streamlines recruitment, onboarding, and employee management while improving decision-making and reducing manual workload.' },
+    { name: 'Research & Market Analysis AI Agent', category: 'AI Automation & AI Agents', desc: 'AI-powered research assistant that collects, analyzes, and interprets market data to support strategic business decisions and stay ahead of competition.' },
+    { name: 'Content Strategist AI Agent', category: 'AI Automation & AI Agents', desc: 'AI-powered content strategist that plans, creates, and optimizes content to boost engagement, SEO performance, and audience growth.' },
+    { name: 'Customer Success AI Agent', category: 'AI Automation & AI Agents', desc: 'AI-powered assistant that enhances customer support, automates follow-ups, and ensures customer satisfaction and retention.' },
+    { name: 'Finance & Cash Flow AI Agent', category: 'AI Automation & AI Agents', desc: 'AI-driven finance assistant that monitors cash flow, predicts trends, and automates financial reporting to help businesses make smarter decisions.' },
+    { name: 'Legal Assistant AI Agent', category: 'AI Automation & AI Agents', desc: 'AI-powered legal assistant that automates contract review, compliance checks, and legal research, reducing risk and saving time for businesses.' },
+    { name: 'Operations Manager AI Agent', category: 'AI Automation & AI Agents', desc: 'AI-driven operations assistant that streamlines workflows, automates task management, and ensures operational efficiency across teams.' },
+    { name: 'E-commerce Growth AI Agent', category: 'AI Automation & AI Agents', desc: 'AI-powered e-commerce assistant that automates sales, marketing, and customer engagement to boost online revenue and growth.' },
+    { name: 'Founder / Executive Assistant AI Agent', category: 'AI Automation & AI Agents', desc: 'AI-powered executive assistant that manages scheduling, communications, and strategic tasks, giving founders and executives more time to focus on growth.' },
+
     // Core Web & SEO Services
     { name: 'Complete Website Development', category: 'Core Web & SEO Services', desc: 'Full custom website development with modern technologies' },
     { name: 'Landing Page Design & Development', category: 'Core Web & SEO Services', desc: 'High-converting landing pages designed for maximum conversions' },

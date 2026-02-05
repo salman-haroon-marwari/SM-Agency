@@ -24,10 +24,10 @@ const HeroSlider = () => {
     },
     {
       id: 2,
-      src: 'https://res.cloudinary.com/dqxqa6uvw/image/upload/v1766956829/hero2_snhat7.png',
+      src: 'https://res.cloudinary.com/dqxqa6uvw/image/upload/v1770326567/Colorful_Geometric_Company_Zoom_Virtual_Background_i08abn.png',
       alt: 'AI Powered Solutions',
       title: 'AI-Powered Solutions',
-      description: 'Leverage artificial intelligence to automate and optimize your business processes.'
+      description: 'Turn manual work into smart AI-powered automation that scales your business.'
     },
     {
       id: 3,

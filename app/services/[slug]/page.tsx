@@ -9,6 +9,648 @@ import { useParams } from 'next/navigation';
 const getServiceDetails = (slug: string) => {
   const servicesMap: Record<string, any> = {
 
+    // AI Automation Services
+    'lead-qualification-automation': {
+      name: 'Lead Qualification Automation',
+      category: 'AI Automation & AI Agents',
+      description: 'An AI-powered lead qualification system that automatically analyzes, scores, and routes leads so your sales team focuses only on high-intent opportunities.',
+      details: [
+        'AI-driven lead scoring and intent analysis',
+        'Automated lead categorization and routing',
+        'Custom qualification logic based on your sales process',
+        'Real-time lead evaluation and prioritization',
+        'CRM integrations (HubSpot, Salesforce, Zoho, Pipedrive)',
+        'Performance tracking and analytics dashboard',
+        'Advanced workflows and custom logic',
+        'Multi-channel lead scoring'
+      ],
+      inclusions: [
+        'Strategy and discovery session',
+        'Custom n8n automation workflow',
+        'AI model and prompt configuration',
+        'CRM integration and testing',
+        'Analytics and performance setup',
+        'Workflow documentation',
+        '90-day post-launch support'
+      ],
+      useCases: [
+        'B2B SaaS companies with high lead volume',
+        'Real estate agencies managing multiple prospects',
+        'Consulting firms with complex sales cycles',
+        'E-commerce businesses with seasonal spikes'
+      ],
+      pricing: {
+        international: '$1,500',
+        description: 'Starting from $1,500. Pricing depends on lead volume, data sources, and CRM integrations. Advanced workflows and custom logic are quoted separately.'
+      }
+    },
+    'customer-support-automation-email-whatsapp-chat': {
+      name: 'Customer Support Automation (Email / WhatsApp / Chat)',
+      category: 'AI Automation & AI Agents',
+      description: 'An AI-powered customer support automation system that handles repetitive queries, responds instantly across channels, and escalates only complex issues to human agents.',
+      details: [
+        'AI-based message understanding',
+        'Automated replies via WhatsApp, chat, and email',
+        'Smart ticket categorization',
+        'Human escalation rules',
+        'CRM & helpdesk integrations',
+        'Customer support analytics dashboard',
+        'Multi-channel support automation',
+        'Natural language processing'
+      ],
+      inclusions: [
+        'Support workflow strategy & design',
+        'Custom n8n automation setup',
+        'AI prompt and response tuning',
+        'Channel integration (WhatsApp, Email, Chat)',
+        'Testing & quality assurance',
+        'Documentation',
+        '90-day post-launch support'
+      ],
+      useCases: [
+        'SaaS customer support',
+        'E-commerce inquiries',
+        'Service-based businesses',
+        'Appointment & booking queries'
+      ],
+      pricing: {
+        international: '$1,800',
+        description: 'Starting from $1,800. Final pricing depends on support volume, channels, and integrations.'
+      }
+    },
+    'invoice-and-payment-follow-up-automation': {
+      name: 'Invoice & Payment Follow-up Automation',
+      category: 'AI Automation & AI Agents',
+      description: 'A smart automation system that tracks invoices, sends personalized payment reminders, and updates payment status automatically—without manual follow-ups.',
+      details: [
+        'Automated invoice tracking',
+        'AI-generated payment reminders',
+        'Due date and overdue logic',
+        'Payment confirmation detection',
+        'Accounting software integration',
+        'Payment status dashboard'
+      ],
+      inclusions: [
+        'Workflow planning & logic design',
+        'Custom n8n automation',
+        'Accounting system integration',
+        'Reminder message templates',
+        'Testing & validation',
+        'Documentation',
+        '90-day support'
+      ],
+      useCases: [
+        'Agencies & consultants',
+        'Subscription businesses',
+        'Service providers',
+        'Freelancers with recurring invoices'
+      ],
+      pricing: {
+        international: '$1,500',
+        description: 'Starting from $1,500. Pricing varies based on invoice volume and accounting integrations.'
+      }
+    },
+    'recruitment-screening-automation': {
+      name: 'Recruitment Screening Automation',
+      category: 'AI Automation & AI Agents',
+      description: 'AI-driven recruitment automation that screens resumes, scores candidates, and shortlists top talent based on role-specific criteria.',
+      details: [
+        'Resume parsing & data extraction',
+        'AI-based candidate scoring',
+        'Role-specific qualification rules',
+        'Automated shortlisting',
+        'HR system integration',
+        'Recruitment analytics dashboard',
+        'Skills assessment automation',
+        'Candidate communication'
+      ],
+      inclusions: [
+        'Hiring workflow design',
+        'AI screening logic setup',
+        'Resume parsing configuration',
+        'ATS or HR tool integration',
+        'Testing & scoring validation',
+        'Documentation',
+        '90-day post-launch support'
+      ],
+      useCases: [
+        'Startups hiring fast',
+        'Recruitment agencies',
+        'Remote teams',
+        'High-volume hiring roles'
+      ],
+      pricing: {
+        international: '$2,000',
+        description: 'Starting from $2,000. Final cost depends on number of roles, applications, and screening logic.'
+      }
+    },
+    'social-media-content-and-posting-automation': {
+      name: 'Social Media Content & Posting Automation',
+      category: 'AI Automation & AI Agents',
+      description: 'An AI-powered social media automation system that plans, creates, schedules, and tracks content across platforms—saving time while maintaining consistency and performance.',
+      details: [
+        'AI-assisted content generation',
+        'Automated post scheduling',
+        'Multi-platform publishing (Instagram, Facebook, LinkedIn, X)',
+        'Content calendar automation',
+        'Performance tracking & insights',
+        'Brand tone consistency'
+      ],
+      inclusions: [
+        'Content workflow strategy',
+        'Custom n8n automation setup',
+        'AI prompt & content logic configuration',
+        'Platform integrations',
+        'Testing & scheduling validation',
+        'Documentation',
+        '90-day post-launch support'
+      ],
+      useCases: [
+        'Marketing agencies',
+        'SaaS brands',
+        'E-commerce businesses',
+        'Personal brands & founders'
+      ],
+      pricing: {
+        international: '$1,700',
+        description: 'Starting from $1,700. Pricing depends on platforms, posting frequency, and content complexity.'
+      }
+    },
+    'automated-business-report-generation': {
+      name: 'Automated Business Report Generation',
+      category: 'AI Automation & AI Agents',
+      description: 'AI automation that transforms raw business data into clear, structured reports delivered automatically on a fixed schedule.',
+      details: [
+        'Automated data collection',
+        'AI-based data analysis & summaries',
+        'Scheduled report generation',
+        'PDF / Google Docs / Dashboard output',
+        'Multi-source data integration',
+        'Executive-ready insights',
+        'Custom report templates',
+        'Data visualization'
+      ],
+      inclusions: [
+        'Reporting workflow design',
+        'Data source integration',
+        'AI analysis & summary prompts',
+        'Report formatting setup',
+        'Testing & accuracy checks',
+        'Documentation',
+        '90-day support'
+      ],
+      useCases: [
+        'Management & leadership teams',
+        'Agencies reporting to clients',
+        'Finance & operations teams',
+        'Performance tracking dashboards'
+      ],
+      pricing: {
+        international: '$2,200',
+        description: 'Starting from $2,200. Final pricing depends on data sources, report frequency, and complexity.'
+      }
+    },
+    'email-sorting-and-priority-automation': {
+      name: 'Email Sorting & Priority Automation',
+      category: 'AI Automation & AI Agents',
+      description: 'A smart email automation system that categorizes, prioritizes, and routes emails automatically so teams focus only on what matters.',
+      details: [
+        'AI-powered email classification',
+        'Priority tagging (urgent, normal, low)',
+        'Automated routing to teams',
+        'SLA-based escalation rules',
+        'Spam & noise reduction',
+        'Email analytics dashboard'
+      ],
+      inclusions: [
+        'Email workflow strategy',
+        'Custom n8n automation',
+        'AI classification prompt setup',
+        'Email provider integration',
+        'Testing & rule validation',
+        'Documentation',
+        '90-day post-launch support'
+      ],
+      useCases: [
+        'Customer support teams',
+        'Sales inbox management',
+        'Operations & admin teams',
+        'High-volume email businesses'
+      ],
+      pricing: {
+        international: '$1,400',
+        description: 'Starting from $1,400. Pricing varies based on email volume and routing complexity.'
+      }
+    },
+    'crm-data-cleaning-and-management-automation': {
+      name: 'CRM Data Cleaning & Management Automation',
+      category: 'AI Automation & AI Agents',
+      description: 'An AI-powered automation system that continuously cleans, validates, and maintains CRM data accuracy—ensuring your sales and marketing teams work with reliable information.',
+      details: [
+        'Automated duplicate detection',
+        'Data validation and normalization',
+        'AI-based data enrichment',
+        'Scheduled CRM maintenance workflows',
+        'Multi-CRM support (HubSpot, Salesforce, Zoho)',
+        'Data quality monitoring dashboard'
+      ],
+      inclusions: [
+        'Data audit & cleanup strategy',
+        'Custom n8n automation workflow',
+        'CRM integration and testing',
+        'Data rules and validation setup',
+        'Documentation',
+        '90-day post-launch support',
+        'Data governance setup'
+      ],
+      useCases: [
+        'Sales teams with large CRMs',
+        'Marketing automation systems',
+        'Growing SaaS businesses',
+        'Agencies managing multiple CRMs'
+      ],
+      pricing: {
+        international: '$1,600',
+        description: 'Starting from $1,600. Pricing depends on CRM size, data sources, and cleaning logic.'
+      }
+    },
+    'e-commerce-order-and-refund-automation': {
+      name: 'E-commerce Order & Refund Automation',
+      category: 'AI Automation & AI Agents',
+      description: 'A smart automation system that manages orders, refunds, and customer notifications automatically—reducing manual workload and improving customer experience.',
+      details: [
+        'Automated order processing',
+        'Refund and cancellation workflows',
+        'Customer notifications via email or WhatsApp',
+        'Inventory and status updates',
+        'E-commerce platform integrations',
+        'Order performance dashboard'
+      ],
+      inclusions: [
+        'Order automation workflow design',
+        'Platform integration (Shopify, WooCommerce)',
+        'Refund logic configuration',
+        'Notification templates',
+        'Testing & error handling',
+        'Documentation',
+        '90-day support'
+      ],
+      useCases: [
+        'Shopify & WooCommerce stores',
+        'DTC brands',
+        'Subscription-based e-commerce',
+        'High-volume online sellers'
+      ],
+      pricing: {
+        international: '$2,500',
+        description: 'Starting from $2,500. Final pricing depends on store size, platforms, and refund logic.'
+      }
+    },
+    'sop-and-internal-process-automation': {
+      name: 'SOP & Internal Process Automation',
+      category: 'AI Automation & AI Agents',
+      description: 'AI-powered SOP automation that guides teams through internal processes, ensures consistency, and reduces operational errors.',
+      details: [
+        'SOP digitization and automation',
+        'Step-by-step AI guidance',
+        'Role-based task routing',
+        'Process compliance tracking',
+        'Internal knowledge integration',
+        'Performance insights dashboard'
+      ],
+      inclusions: [
+        'SOP discovery and mapping',
+        'Custom n8n workflow setup',
+        'AI prompt and logic configuration',
+        'Testing & optimization',
+        'Documentation',
+        '90-day post-launch support',
+        'Training and documentation'
+      ],
+      useCases: [
+        'Operations-heavy businesses',
+        'Remote teams',
+        'Scaling startups',
+        'Agencies & service providers'
+      ],
+      pricing: {
+        international: '$2,000',
+        description: 'Starting from $2,000. Pricing varies based on SOP complexity and team size.'
+      }
+    },
+
+    // AI Agents Services
+    'sales-ai-agent': {
+      name: 'Sales AI Agent',
+      category: 'AI Automation & AI Agents',
+      description: 'AI-powered sales assistant that identifies leads, predicts conversions, and automates follow-ups to maximize revenue and reduce manual sales effort.',
+      details: [
+        'Lead scoring & qualification automation',
+        'Automated follow-ups & reminders',
+        'CRM integration & data sync',
+        'Sales performance tracking',
+        'Personalized AI insights for prospects',
+        'Revenue forecasting'
+      ],
+      inclusions: [
+        'Sales process discovery & mapping',
+        'Custom n8n workflow setup',
+        'AI prompt & logic configuration',
+        'Testing & optimization',
+        'Documentation',
+        '90-day post-launch support'
+      ],
+      useCases: [
+        'B2B & B2C sales teams',
+        'Startups scaling revenue',
+        'Remote sales teams',
+        'Agencies offering lead generation'
+      ],
+      pricing: {
+        international: '$2,500',
+        description: 'Starting from $2,500. Pricing varies based on sales pipeline complexity and CRM integrations.'
+      }
+    },
+    'hr-and-hiring-ai-agent': {
+      name: 'HR & Hiring AI Agent',
+      category: 'AI Automation & AI Agents',
+      description: 'AI-driven HR assistant that streamlines recruitment, onboarding, and employee management while improving decision-making and reducing manual workload.',
+      details: [
+        'Resume screening & ranking',
+        'Candidate matching & interview scheduling',
+        'Onboarding automation',
+        'Employee performance tracking',
+        'HR policy compliance monitoring',
+        'AI insights for workforce planning'
+      ],
+      inclusions: [
+        'HR process discovery & mapping',
+        'Custom n8n workflow setup',
+        'AI prompt & logic configuration',
+        'Testing & optimization',
+        'Documentation',
+        '90-day post-launch support'
+      ],
+      useCases: [
+        'Fast-growing startups',
+        'Enterprises with large recruitment pipelines',
+        'Remote HR teams',
+        'Agencies managing multiple clients'
+      ],
+      pricing: {
+        international: '$2,000',
+        description: 'Starting from $2,000. Pricing varies based on team size and recruitment complexity.'
+      }
+    },
+    'research-and-market-analysis-ai-agent': {
+      name: 'Research & Market Analysis AI Agent',
+      category: 'AI Automation & AI Agents',
+      description: 'AI-powered research assistant that collects, analyzes, and interprets market data to support strategic business decisions and stay ahead of competition.',
+      details: [
+        'Automated market trend monitoring',
+        'Competitor analysis & benchmarking',
+        'Customer sentiment analysis',
+        'Data visualization & reporting',
+        'Actionable AI insights',
+        'Predictive forecasting'
+      ],
+      inclusions: [
+        'Research process mapping & setup',
+        'Custom n8n workflow creation',
+        'AI logic & prompt configuration',
+        'Testing & optimization',
+        'Documentation',
+        '90-day post-launch support'
+      ],
+      useCases: [
+        'Startups & enterprises seeking market intelligence',
+        'Product development & strategy teams',
+        'Agencies providing research services',
+        'Investors & business consultants'
+      ],
+      pricing: {
+        international: '$2,200',
+        description: 'Starting from $2,200. Pricing varies based on data sources, analysis complexity, and reporting requirements.'
+      }
+    },
+    'content-strategist-ai-agent': {
+      name: 'Content Strategist AI Agent',
+      category: 'AI Automation & AI Agents',
+      description: 'AI-powered content strategist that plans, creates, and optimizes content to boost engagement, SEO performance, and audience growth.',
+      details: [
+        'Content planning & calendar automation',
+        'SEO keyword research & optimization',
+        'AI-assisted copywriting & editing',
+        'Multi-channel content distribution',
+        'Performance tracking & analytics',
+        'Audience engagement insights'
+      ],
+      inclusions: [
+        'Content strategy discovery & mapping',
+        'Custom n8n workflow setup',
+        'AI prompt & logic configuration',
+        'Testing & optimization',
+        'Documentation',
+        '90-day post-launch support'
+      ],
+      useCases: [
+        'Marketing teams scaling content output',
+        'Bloggers & influencers',
+        'Agencies offering content services',
+        'Startups building brand awareness'
+      ],
+      pricing: {
+        international: '$2,000',
+        description: 'Starting from $2,000. Pricing varies based on content volume, channels, and complexity.'
+      }
+    },
+    'customer-success-ai-agent': {
+      name: 'Customer Success AI Agent',
+      category: 'AI Automation & AI Agents',
+      description: 'AI-powered assistant that enhances customer support, automates follow-ups, and ensures customer satisfaction and retention.',
+      details: [
+        'Automated ticket triage & routing',
+        'AI-driven responses & chatbots',
+        'Customer onboarding automation',
+        'Feedback collection & analysis',
+        'Customer retention insights',
+        'Performance dashboards for support teams'
+      ],
+      inclusions: [
+        'Customer journey mapping & automation setup',
+        'Custom n8n workflow creation',
+        'AI logic & prompt configuration',
+        'Testing & optimization',
+        'Documentation',
+        '90-day post-launch support'
+      ],
+      useCases: [
+        'SaaS & tech companies',
+        'E-commerce & service providers',
+        'Customer support teams scaling operations',
+        'Agencies managing client support'
+      ],
+      pricing: {
+        international: '$2,200',
+        description: 'Starting from $2,200. Pricing varies based on support channels, volume, and automation complexity.'
+      }
+    },
+    'finance-and-cash-flow-ai-agent': {
+      name: 'Finance & Cash Flow AI Agent',
+      category: 'AI Automation & AI Agents',
+      description: 'AI-driven finance assistant that monitors cash flow, predicts trends, and automates financial reporting to help businesses make smarter decisions.',
+      details: [
+        'Cash flow monitoring & forecasting',
+        'Invoice & expense tracking automation',
+        'Budget planning & alerts',
+        'Financial reporting dashboards',
+        'AI-powered insights for decision-making',
+        'Compliance monitoring'
+      ],
+      inclusions: [
+        'Finance process mapping & discovery',
+        'Custom n8n workflow setup',
+        'AI prompt & logic configuration',
+        'Testing & optimization',
+        'Documentation',
+        '90-day post-launch support'
+      ],
+      useCases: [
+        'Small & medium enterprises',
+        'Startups managing tight cash flow',
+        'Accounting & finance teams',
+        'Agencies offering financial consulting'
+      ],
+      pricing: {
+        international: '$2,500',
+        description: 'Starting from $2,500. Pricing varies based on business size, transactions, and reporting requirements.'
+      }
+    },
+    'legal-assistant-ai-agent': {
+      name: 'Legal Assistant AI Agent',
+      category: 'AI Automation & AI Agents',
+      description: 'AI-powered legal assistant that automates contract review, compliance checks, and legal research, reducing risk and saving time for businesses.',
+      details: [
+        'Contract drafting & review automation',
+        'Legal research & case analysis',
+        'Compliance monitoring & alerts',
+        'Risk assessment & reporting',
+        'Document management & tracking',
+        'AI insights for informed legal decisions'
+      ],
+      inclusions: [
+        'Legal process discovery & mapping',
+        'Custom n8n workflow setup',
+        'AI prompt & logic configuration',
+        'Testing & optimization',
+        'Documentation',
+        '90-day post-launch support'
+      ],
+      useCases: [
+        'Law firms',
+        'Startups & enterprises managing contracts',
+        'Compliance-heavy industries',
+        'Agencies providing legal services'
+      ],
+      pricing: {
+        international: '$2,500',
+        description: 'Starting from $2,500. Pricing varies based on case complexity, contract volume, and regulatory requirements.'
+      }
+    },
+    'operations-manager-ai-agent': {
+      name: 'Operations Manager AI Agent',
+      category: 'AI Automation & AI Agents',
+      description: 'AI-driven operations assistant that streamlines workflows, automates task management, and ensures operational efficiency across teams.',
+      details: [
+        'Task allocation & workflow automation',
+        'Performance tracking & reporting',
+        'Resource planning & optimization',
+        'Role-based task routing',
+        'Operational compliance monitoring',
+        'AI insights for process improvement'
+      ],
+      inclusions: [
+        'Operations mapping & discovery',
+        'Custom n8n workflow setup',
+        'AI prompt & logic configuration',
+        'Testing & optimization',
+        'Documentation',
+        '90-day post-launch support'
+      ],
+      useCases: [
+        'Large teams & remote operations',
+        'Startups scaling processes',
+        'Agencies managing multiple clients',
+        'Operations-heavy enterprises'
+      ],
+      pricing: {
+        international: '$2,200',
+        description: 'Starting from $2,200. Pricing varies based on team size, workflow complexity, and automation scope.'
+      }
+    },
+    'e-commerce-growth-ai-agent': {
+      name: 'E-commerce Growth AI Agent',
+      category: 'AI Automation & AI Agents',
+      description: 'AI-powered e-commerce assistant that automates sales, marketing, and customer engagement to boost online revenue and growth.',
+      details: [
+        'Automated product listing optimization',
+        'Dynamic pricing & inventory tracking',
+        'AI-driven marketing campaigns',
+        'Customer behavior analytics',
+        'Sales performance dashboards',
+        'Retention & loyalty insights'
+      ],
+      inclusions: [
+        'E-commerce workflow mapping & setup',
+        'Custom n8n workflow creation',
+        'AI prompt & logic configuration',
+        'Testing & optimization',
+        'Documentation',
+        '90-day post-launch support'
+      ],
+      useCases: [
+        'Online stores & marketplaces',
+        'Dropshipping & retail businesses',
+        'Marketing & growth teams',
+        'Agencies managing e-commerce clients'
+      ],
+      pricing: {
+        international: '$2,500',
+        description: 'Starting from $2,500. Pricing varies based on store size, product catalog, and automation features.'
+      }
+    },
+    'founder-executive-assistant-ai-agent': {
+      name: 'Founder / Executive Assistant AI Agent',
+      category: 'AI Automation & AI Agents',
+      description: 'AI-powered executive assistant that manages scheduling, communications, and strategic tasks, giving founders and executives more time to focus on growth.',
+      details: [
+        'Calendar & meeting management automation',
+        'Email & communication triage',
+        'Task prioritization & reminders',
+        'Strategic insights & reporting',
+        'Workflow integration across tools',
+        'AI-powered decision support'
+      ],
+      inclusions: [
+        'Executive workflow discovery & mapping',
+        'Custom n8n workflow setup',
+        'AI prompt & logic configuration',
+        'Testing & optimization',
+        'Documentation',
+        '90-day post-launch support'
+      ],
+      useCases: [
+        'Founders & CEOs managing multiple priorities',
+        'Executive teams scaling operations',
+        'Startups with limited administrative resources',
+        'Agencies supporting high-level executives'
+      ],
+      pricing: {
+        international: '$2,500',
+        description: 'Starting from $2,500. Pricing varies based on task complexity, team integration, and automation requirements.'
+      }
+    },
+
     'complete-website-development': {
       name: 'Complete Website Development',
       category: 'Core Web & SEO Services',
@@ -1748,6 +2390,7 @@ const ServiceDetailPage = () => {
       'Documentation',
       '30-day support'
     ],
+    useCases: [],
     pricing: {
       international: 'Contact for pricing',
       description: 'Pricing varies based on specific requirements. Contact us for a custom quote.'
@@ -1821,6 +2464,23 @@ const ServiceDetailPage = () => {
                 ))}
               </ul>
             </div>
+            
+            {/* Use Cases Section */}
+            {currentService.useCases && currentService.useCases.length > 0 && (
+              <div className="mt-12">
+                <h2 className="text-3xl font-bold text-gray-900 mb-6">Use Cases</h2>
+                <div className="prose prose-lg max-w-none">
+                  <ul className="space-y-3">
+                    {currentService.useCases.map((useCase: string, index: number) => (
+                      <li key={index} className="flex items-start">
+                        <span className="text-purple-500 mr-2 mt-1">✓</span>
+                        <span className="text-gray-700">{useCase}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            )}
           </div>
 
           {/* Inclusions Sidebar */}

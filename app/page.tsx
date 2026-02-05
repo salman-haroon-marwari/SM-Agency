@@ -4,13 +4,17 @@ import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import HeroSlider from './components/hero-slider';
+import LiveProjectsCounter from './components/live-projects-counter';
+
+
 
 const HomePage = () => {
 
   const services = [
     { name: 'Web Development', desc: 'Complete website solutions' },
     { name: 'SEO Optimization', desc: 'Rank higher in search results' },
-    { name: 'AI Solutions', desc: 'Automate and optimize processes' },
+    { name: 'AI Automation', desc: 'Streamline workflows with intelligent automation' },
+    { name: 'AI Agents', desc: 'Smart agents for business process automation' },
     { name: 'Digital Marketing', desc: 'Reach your target audience' },
   ];
 
@@ -36,6 +40,15 @@ const HomePage = () => {
         <div className="container mx-auto px-4 relative z-10">
           <div className="rounded-2xl overflow-hidden shadow-2xl border border-indigo-100 transform transition-all duration-500 hover:scale-[1.01]">
             {typeof window !== 'undefined' && <HeroSlider />}
+          </div>
+        </div>
+      </section>
+
+      {/* Live Projects Queue */}
+      <section className="py-2 bg-gradient-to-r from-green-500 to-emerald-600 text-white border-b-2 border-yellow-400 shadow-md">
+        <div className="container mx-auto px-4">
+          <div className="flex justify-center items-center">
+            <LiveProjectsCounter />
           </div>
         </div>
       </section>
@@ -139,8 +152,19 @@ const HomePage = () => {
               transition={{ duration: 0.5, delay: 0.3 }}
             >
               <div className="text-purple-600 text-3xl mb-4">🤖</div>
-              <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2">AI Solutions</h3>
-              <p className="text-sm sm:text-base text-gray-600">Intelligent automation and machine learning implementations</p>
+              <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2">AI Automation</h3>
+              <p className="text-sm sm:text-base text-gray-600">Streamline workflows with intelligent automation solutions</p>
+            </motion.div>
+            <motion.div 
+              className="bg-gradient-to-br from-indigo-50 to-blue-50 p-6 sm:p-8 rounded-xl border border-indigo-100 hover:shadow-xl transition-shadow hover-lift"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.35 }}
+            >
+              <div className="text-indigo-600 text-3xl mb-4">🧠</div>
+              <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2">AI Agents</h3>
+              <p className="text-sm sm:text-base text-gray-600">Smart agents for business process automation</p>
             </motion.div>
             <motion.div 
               className="bg-gradient-to-br from-orange-50 to-amber-50 p-6 sm:p-8 rounded-xl border border-orange-100 hover:shadow-xl transition-shadow hover-lift"
@@ -395,11 +419,31 @@ const HomePage = () => {
               transition={{ duration: 0.5, delay: 0.3 }}
             >
               <div className="text-purple-600 text-3xl mb-4">🤖</div>
-              <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2">AI Solutions</h3>
-              <p className="text-sm sm:text-base text-gray-600 mb-4">AI-powered content creation and automation services</p>
+              <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2">AI Automation</h3>
+              <p className="text-sm sm:text-base text-gray-600 mb-4">Streamline workflows with intelligent automation solutions</p>
               <Link 
-                href="/services/ai-seo-blog-writing" 
+                href="/services/invoice-and-payment-follow-up-automation" 
                 className="text-purple-600 hover:text-purple-800 font-medium inline-flex items-center"
+              >
+                Learn more
+                <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </Link>
+            </motion.div>
+            <motion.div 
+              className="bg-gradient-to-br from-indigo-50 to-blue-50 p-6 sm:p-8 rounded-xl border border-indigo-100 hover:shadow-xl transition-shadow hover-lift"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.35 }}
+            >
+              <div className="text-indigo-600 text-3xl mb-4">🧠</div>
+              <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2">AI Agents</h3>
+              <p className="text-sm sm:text-base text-gray-600 mb-4">Smart agents for business process automation</p>
+              <Link 
+                href="/services/hr-and-hiring-ai-agent" 
+                className="text-indigo-600 hover:text-indigo-800 font-medium inline-flex items-center"
               >
                 Learn more
                 <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
