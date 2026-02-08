@@ -363,7 +363,7 @@ const CEOPortfolioPage = () => {
               Contact Us
             </Link>
             <Link 
-              href="https://linktr.ee/salman_marwari" 
+              href="https://linktr.ee/SalmanMarwari" 
               target="_blank"
               rel="noopener noreferrer"
               className="bg-white text-green-600 px-8 py-4 rounded-full text-lg font-medium hover:bg-gray-100 transition-all shadow-lg flex items-center justify-center space-x-2"

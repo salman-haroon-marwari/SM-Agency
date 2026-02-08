@@ -4,6 +4,7 @@ import Script from 'next/script';
 import "./globals.css";
 import Navbar from "./components/navbar";
 import Footer from "./components/footer";
+import AISalesAgent from "./components/ai-sales-agent";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -138,6 +139,7 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
+        <AISalesAgent />
       </body>
     </html>
   );
