@@ -1,0 +1,14 @@
+# AdsTxt file for SM-Agency
+# Generated on 2026-02-10
+
+# Google AdSense
+google.com, pub-3801917256432766, DIRECT, f08c47fec0942fa0
+
+# Add your AdSense publisher ID here once approved
+# Example format:
+# google.com, pub-1234567890123456, DIRECT, f08c47fec0942fa0
+
+# Other ad networks (add as needed)
+# doubleclick.net, pub-XXXXXXXXXXXXXXXX, DIRECT, abc123abc123abc1
+
+# Customer ID: 8646253838
