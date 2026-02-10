@@ -75,6 +75,17 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <meta name="p:domain_verify" content="ceaf0c4a16f7ce3829918f37fb304fe0" />
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3801917256432766"
+             crossOrigin="anonymous"></script>
+        <Script
+          id="adsense-script"
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              (adsbygoogle = window.adsbygoogle || []).push({});
+            `
+          }}
+        />
         <Script
           id="schema-markup"
           type="application/ld+json"
