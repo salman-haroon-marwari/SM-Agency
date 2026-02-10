@@ -1,0 +1,20 @@
+# www.robotstxt.org/
+
+# Allow all robots to crawl all pages
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://www.sm-agency.com/sitemap.xml
+
+# Disallow access to sensitive areas
+Disallow: /admin/
+Disallow: /private/
+Disallow: /api/private/
+
+# Crawl-delay if needed (uncomment if required)
+# Crawl-delay: 5
+
+# Specific robot directives if needed
+# User-agent: Googlebot
+# Disallow: /directory/
